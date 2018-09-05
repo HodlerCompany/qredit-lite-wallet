@@ -1,0 +1,52 @@
+{
+  "name": "qredit-nano-wallet",
+  "version": "1.0.4",
+  "description": "Qredit Nano Wallet",
+  "homepage": "https://github.com/HodlerCompany/qredit-lite-wallet",
+  "bugs": "https://github.com/HodlerCompany/qredit-lite-wallet/issues",
+  "scripts": {
+    "start": "electron app",
+    "dist": "npm run dist:macos && npm run dist:linux && npm run dist:win32 && npm run dist:win64",
+    "dist:win64": "build --win --x64",
+    "dist:win32": "build --win --ia32",
+    "dist:macos": "build --macos",
+    "dist:linux": "build --linux",
+    "build": "cd src && npm run build"
+  },
+  "author": {
+    "name": "Giovanni Silvestri",
+    "email": "gsit80@gmail.com",
+    "url": "https://github.com/gsilvestri"
+  },
+  "contributors": [
+    {
+      "name": "Ricardo Ferro",
+      "email": "ricardo@lisk.io",
+      "url": "https://github.com/rferro"
+    },
+    {
+      "name": "Guillaume Verbal",
+      "email": "doweig@ark.io",
+      "url": "https://github.com/doweig"        
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HodlerCompany/qredit-lite-wallet"
+  },
+  "devDependencies": {
+    "electron": "^1.4.15",
+    "electron-builder": "^12.3.1"
+  },
+  "build": {
+    "appId": "io.qredit.nano.wallet",
+    "mac": {
+      "category": "finance"
+    },
+    "productName": "Qredit Nano",
+    "win": {
+      "target": "nsis"
+    }
+  },
+  "license": "MIT"
+}
