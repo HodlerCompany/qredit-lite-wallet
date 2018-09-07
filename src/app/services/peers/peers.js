@@ -10,8 +10,8 @@ app.factory('$peers', ($peer, $timeout) => {
     constructor () {
       this.stack = {
         official: [
-          new $peer({ host: 'api.qredit.io', port: null, ssl: true }),
-          new $peer({ host: 'api2.qredit.io', port: null, ssl: true }),
+          new $peer({ host: 'api.qredit.cloud', port: null, ssl: false }),
+          new $peer({ host: '185.85.18.192', port: 4100, ssl: false }),
         ],
         public: [],
         testnet: [
